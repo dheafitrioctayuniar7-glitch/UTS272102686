@@ -25,7 +25,11 @@
               }
             ],
             "styles": [
+              "public/css/adminlte.min.css",
               "src/styles.css"
+            ],
+            "scripts": [
+              "public/js/adminlte.min.js"
             ]
           },
           "configurations": {

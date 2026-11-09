@@ -1,0 +1,42 @@
+<section class="gallery-layout">
+  <div class="content-header">
+    <div>
+      <h1>Gallery</h1>
+    </div>
+    <div class="breadcrumb">Home / Gallery</div>
+  </div>
+
+  <div class="card gallery-card-shell">
+    <div class="card-header gallery-toolbar-card">
+      <div class="toolbar-label">Media library</div>
+      <div class="filter-group">
+        <button type="button" class="filter-btn active">All</button>
+        <button type="button" class="filter-btn">Places</button>
+        <button type="button" class="filter-btn">Products</button>
+        <button type="button" class="filter-btn">Interiors</button>
+        <button type="button" class="filter-btn">People</button>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-3" id="gallery-grid">
+        @for (photo of photos; track photo.name) {
+          <div class="col">
+            <figure class="card gallery-item-card h-100 mb-0">
+              <div class="img-frame">
+                <img [src]="photo.image" [alt]="photo.name" class="gallery-image" loading="lazy" />
+              </div>
+              <figcaption class="card-footer">
+                <div class="title-wrap">
+                  <p class="photo-name">{{ photo.name }}</p>
+                  <p class="photo-meta">{{ photo.size }} · {{ photo.resolution }}</p>
+                </div>
+                <button type="button" class="menu-button-small" aria-label="Open menu">⋮</button>
+              </figcaption>
+            </figure>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

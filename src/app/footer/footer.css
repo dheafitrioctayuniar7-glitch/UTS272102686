@@ -1,0 +1,27 @@
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  color: #64748b;
+  font-size: 0.84rem;
+}
+
+.app-footer strong {
+  color: #475569;
+}
+
+.app-footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+@media (max-width: 680px) {
+  .app-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
